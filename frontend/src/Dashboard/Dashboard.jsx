@@ -106,7 +106,7 @@ function Dashboard() {
   },[])
   const loadCPO = async() => {
     try{
-      const {data} = await axios.get("http://localhost:8000/api/itempos")
+      const {data} = await axios.get("https://project-management-final-udxp.onrender.com/api/itempos")
       setCpo(data);
     } catch(err){
       console.log(err);
@@ -115,7 +115,7 @@ function Dashboard() {
   }
   const loadPPO = async() => {
     try{
-      const {data} = await axios.get("http://localhost:8000/api/itemppos")
+      const {data} = await axios.get("https://project-management-final-udxp.onrender.com/api/itemppos")
       setPurchase(data);
     } catch(err){
       console.log(err);

@@ -88,7 +88,7 @@ function ManageSupplier() {
 
   const loadSuppliers = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/suppliers");
+      const { data } = await axios.get("https://project-management-final-udxp.onrender.com/api/suppliers");
       setSuppliers(data);
       //console.log(data)
     } catch (err) {
