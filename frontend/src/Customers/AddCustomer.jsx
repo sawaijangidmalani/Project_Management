@@ -15,7 +15,7 @@ function AddCustomer({ editingCustomer, setVisible,loadCustomers }) {
   const [gstn, setGstn] = useState("");
   const [status, setStatus] = useState("");
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   useEffect(() => {
     if (editingCustomer) {

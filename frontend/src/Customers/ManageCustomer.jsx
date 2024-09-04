@@ -124,6 +124,7 @@ function ManageCustomer() {
           {customers.map((customer) => (
                 <Option key={customer.id}>{customer.name}</Option> ))}
             </Select> */}
+            <Option></Option>
             <StyledSelect
               onChange={(e) => setSearchTerm(e.target.value)}
               value={searchTerm}
