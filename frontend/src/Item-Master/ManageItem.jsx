@@ -79,7 +79,7 @@ function ManageItem() {
 
   const loadSupplier = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/suppliers");
+      const { data } = await axios.get("https://project-management-final-udxp.onrender.com/api/suppliers");
       setSupplier(data);
     } catch (err) {
       console.log(err);
@@ -92,7 +92,7 @@ function ManageItem() {
 
   const loadItems = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/items");
+      const { data } = await axios.get("https://project-management-final-udxp.onrender.com/api/items");
       setItems(data);
     } catch (err) {
       console.log(err);
@@ -106,7 +106,7 @@ function ManageItem() {
 
   const handleDelete = async (itemId) => {
     try {
-      const { data } = await axios.delete(`http://localhost:8000/api/items/${itemId}`);
+      const { data } = await axios.delete(`https://project-management-final-udxp.onrender.com/api/items/${itemId}`);
             console.log(data);
             
       if (data?.error) {

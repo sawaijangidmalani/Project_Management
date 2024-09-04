@@ -86,7 +86,7 @@ function ManagePurchase() {
 
   const loadPurchase = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/purchases")
+      const { data } = await axios.get("https://project-management-final-udxp.onrender.com/api/purchases")
       console.log(data);
       
       setPurchaseData(data);
@@ -96,7 +96,7 @@ function ManagePurchase() {
   }
   const handleDelete = async (itemId) => {
     try {
-      const { data } = await axios.delete(`http://localhost:8000/api/purchases/${itemId}`);
+      const { data } = await axios.delete(`https://project-management-final-udxp.onrender.com/api/purchases/${itemId}`);
       console.log(data);
 
       if (data?.error) {

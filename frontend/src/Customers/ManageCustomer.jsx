@@ -88,7 +88,7 @@ function ManageCustomer() {
 
   const loadCustomers = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/customers");
+      const { data } = await axios.get("https://project-management-final-udxp.onrender.com/api/customers");
       setCustomers(data);
       //console.log(data)
     } catch (err) {
@@ -99,7 +99,7 @@ function ManageCustomer() {
 
   const handleDelete = async (customerId) => {
     try {
-      const { data } = await axios.delete(`http://localhost:8000/api/customers/${customerId}`);
+      const { data } = await axios.delete(`https://project-management-final-udxp.onrender.com/api/customers/${customerId}`);
       if (data?.error) {
         toast.error(data.error);
       } else {

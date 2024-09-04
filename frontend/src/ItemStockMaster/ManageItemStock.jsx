@@ -1,7 +1,6 @@
 
 import styled from "styled-components";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import AddItem from "../Item-Master/AddItem";
 import ItemStockDetail from "./ItemStockDetail";
 import ItemPrice from "../Item-Master/ItemPrice";

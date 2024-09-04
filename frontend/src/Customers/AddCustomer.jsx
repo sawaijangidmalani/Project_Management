@@ -55,12 +55,12 @@ function AddCustomer({ editingCustomer, setVisible,loadCustomers }) {
       let res;
       if (editingCustomer && editingCustomer._id) {
         res = await axios.put(
-          `http://localhost:8000/api/customers/${editingCustomer._id}`,
+          `https://project-management-final-udxp.onrender.com/api/customers/${editingCustomer._id}`,
           customerData
         );
       } else {
         res = await axios.post(
-          "http://localhost:8000/api/customer",
+          "https://project-management-final-udxp.onrender.com/api/customer",
           customerData,
           {
             headers: { "Content-Type": "multipart/form-data" },

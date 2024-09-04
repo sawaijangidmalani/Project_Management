@@ -38,7 +38,7 @@ const PurchaseOrder = ({purchaseEditing}) => {
 
   const loadCustomers = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/customerpos");
+      const { data } = await axios.get("https://project-management-final-udxp.onrender.com/api/customerpos");
       setCustomers(data);
     } catch (err) {
       console.log(err);
@@ -63,7 +63,7 @@ const PurchaseOrder = ({purchaseEditing}) => {
     event.preventDefault();
     try {
       if(purchaseEditing && purchaseEditing._id){
-        const { data } = await axios.put(`http://localhost:8000/api/purchases/${purchaseEditing._id}`, { customer, customerpo, date, status, purchase }, {
+        const { data } = await axios.put(`https://project-management-final-udxp.onrender.com/api/purchases/${purchaseEditing._id}`, { customer, customerpo, date, status, purchase }, {
           headers: { "Content-Type": "multipart/form-data" }
         });
         if (data.error) {
@@ -73,7 +73,7 @@ const PurchaseOrder = ({purchaseEditing}) => {
         }
 
       } else{
-        const { data } = await axios.post("http://localhost:8000/api/purchase", { customer, customerpo, date, status, purchase }, {
+        const { data } = await axios.post("https://project-management-final-udxp.onrender.com/api/purchase", { customer, customerpo, date, status, purchase }, {
           headers: { "Content-Type": "multipart/form-data" }
         });
         if (data.error) {

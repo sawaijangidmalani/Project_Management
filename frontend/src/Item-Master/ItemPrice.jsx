@@ -28,7 +28,7 @@ function ItemPrice({ setShowItem, item: selectedItem }) {
 
   const loadItemsprice = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/itemprices");
+      const { data } = await axios.get("https://project-management-final-udxp.onrender.com/api/itemprices");
 
       // Filter the item prices to only include those for the selected item
       const filteredPrices = data.filter(price => price.item === selectedItem.item);
@@ -45,7 +45,7 @@ function ItemPrice({ setShowItem, item: selectedItem }) {
       let response;
       if (editprice) {
         response = await axios.put(
-          `http://localhost:8000/api/itemprices/${editprice._id}`,
+          `https://project-management-final-udxp.onrender.com/api/itemprices/${editprice._id}`,
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -53,7 +53,7 @@ function ItemPrice({ setShowItem, item: selectedItem }) {
         );
       } else {
         response = await axios.post(
-          "http://localhost:8000/api/itemprice",
+          "https://project-management-final-udxp.onrender.com/api/itemprice",
           { ...formData, item: selectedItem.item },
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -96,7 +96,7 @@ function ItemPrice({ setShowItem, item: selectedItem }) {
   const handleDelete = async (id) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:8000/api/itemprices/${id}`
+        `https://project-management-final-udxp.onrender.com/api/itemprices/${id}`
       );
 
       if (data?.error) {

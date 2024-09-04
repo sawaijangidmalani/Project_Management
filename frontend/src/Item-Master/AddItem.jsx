@@ -39,7 +39,7 @@ const AddItem = ({editingItem, setVisible, supplier,loadItems }) => {
       let res;
       if (editingItem && editingItem._id) {
         res = await axios.put(
-          `http://localhost:8000/api/items/${editingItem._id}`,
+          `https://project-management-final-udxp.onrender.com/api/items/${editingItem._id}`,
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -47,7 +47,7 @@ const AddItem = ({editingItem, setVisible, supplier,loadItems }) => {
         );
       } else {
         res = await axios.post(
-          "http://localhost:8000/api/item",
+          "https://project-management-final-udxp.onrender.com/api/item",
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },

@@ -40,7 +40,7 @@ function AddPurchaseItem({setEditpo,setShowAddOrEdit}) {
 
   const loaditems = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/itemppos");
+      const { data } = await axios.get("https://project-management-final-udxp.onrender.com/api/itemppos");
       setItems(data);
     } catch (err) {
       console.log(err);
@@ -48,7 +48,7 @@ function AddPurchaseItem({setEditpo,setShowAddOrEdit}) {
   };
   const handleDelete = async (itemId) => {
     try {
-      const { data } = await axios.delete(`http://localhost:8000/api/itemppos/${itemId}`);
+      const { data } = await axios.delete(`https://project-management-final-udxp.onrender.com/api/itemppos/${itemId}`);
              console.log(data);
              
       if (data?.error) {
@@ -63,7 +63,7 @@ function AddPurchaseItem({setEditpo,setShowAddOrEdit}) {
   };
   const loadPrice = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/itemprices");
+      const { data } = await axios.get("https://project-management-final-udxp.onrender.com/api/itemprices");
       setPrices(data);
     } catch (err) {
       console.log(err);

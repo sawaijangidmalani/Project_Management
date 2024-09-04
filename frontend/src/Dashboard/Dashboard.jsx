@@ -115,7 +115,7 @@ function Dashboard() {
   }
   const loadPPO = async() => {
     try{
-      const {data} = await axios.get("https://project-management-final-udxp.onrender.com/api/itemppos")
+      const {data} = await axios.get("https://project-management-final-udxp.onrender.comapi/itemppos")
       setPurchase(data);
     } catch(err){
       console.log(err);

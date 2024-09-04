@@ -65,7 +65,7 @@ const AddOrEdit = ({editpo,setShowAddOrEdit}) => {
     try {
       if(editpo && editpo._id){
         const { data } = await axios.put(
-          `http://localhost:8000/api/itemppos/${editpo._id}`,
+          `https://project-management-final-udxp.onrender.com/api/itemppos/${editpo._id}`,
           { item, avlqty, altqty, remqty, ivnumber, ivdate,cost,pprice },
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -81,7 +81,7 @@ const AddOrEdit = ({editpo,setShowAddOrEdit}) => {
 
       } else {
         const { data } = await axios.post(
-          "http://localhost:8000/api/itemppo",
+          "https://project-management-final-udxp.onrender.com/api/itemppo",
           { item, avlqty, altqty, remqty, ivnumber, ivdate,cost,pprice },
           {
             headers: { "Content-Type": "multipart/form-data" },
