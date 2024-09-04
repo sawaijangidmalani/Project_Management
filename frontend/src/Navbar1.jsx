@@ -19,6 +19,7 @@ function Navbar1() {
         </Link>
         </div>
         <div className="logout">
+          <h3>Gravitas Technosoft</h3>
         <h3>{auth?.user?.name}</h3>
         <Link to="/"><BiLogOutCircle style={{ fontSize: '2em' }}/></Link>
         </div>
