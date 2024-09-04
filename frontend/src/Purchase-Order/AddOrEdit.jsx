@@ -40,7 +40,7 @@ const AddOrEdit = ({editpo,setShowAddOrEdit}) => {
   }, [editpo]);
   const loadItems = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/items");
+      const { data } = await axios.get("https://project-management-final-udxp.onrender.com/api/items");
       setItems(data);
     } catch (err) {
       console.log(err);
