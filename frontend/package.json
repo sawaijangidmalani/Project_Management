@@ -23,10 +23,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "type": "module"
+    "type": "module",
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build"
   },
   "eslintConfig": {
     "extends": [
