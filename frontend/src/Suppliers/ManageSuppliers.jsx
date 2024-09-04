@@ -98,7 +98,7 @@ function ManageSupplier() {
 
   const handleDelete = async (supplierId) => {
     try {
-      const { data } = await axios.delete(`http://localhost:8000/api/suppliers/${supplierId}`);
+      const { data } = await axios.delete(`https://project-management-final-udxp.onrender.com/api/suppliers/${supplierId}`);
          
       if (data?.error) {
         toast.error(data.error);

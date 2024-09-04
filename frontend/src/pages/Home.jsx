@@ -17,8 +17,8 @@ const StyledDiv = styled.div`
 
 function Home() {
   const [auth, setAuth] = useAuth();
-  const [email, setEmail] = useState("pjangid096@gmail.com");
-  const [password, setPassword] = useState("12345678");
+  const [email, setEmail] = useState("sawaijangid0706@gmail.com");
+  const [password, setPassword] = useState("sawai@0706");
   //const location = useLocation();
 
   const [isLogin] = useState(false);
@@ -33,7 +33,7 @@ function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:8000/api/login", {
+      const { data } = await axios.post("https://project-management-final-udxp.onrender.com/api/login", {
         email,
         password
       });
